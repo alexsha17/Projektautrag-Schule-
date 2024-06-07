@@ -1,0 +1,180 @@
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 15ch;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        border-color: transparent;
+    }
+    50%, 100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes enhancedFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.85) rotate(-10deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+body, header, main, footer {
+    animation: enhancedFadeIn 2.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+header {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 20px;
+    z-index: 100;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    border: 2px solid transparent;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+header nav h1 {
+    font-size: 50px;
+    margin: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+main .highlight {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    z-index: 100;
+    position: relative;
+}
+
+main .highlight img {
+    width: 150px;
+    height: auto;
+}
+
+main .highlight .content h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+footer {
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 8px;
+    background-color: rgb(126, 91, 255);
+}
+
+@keyframes slideOutAndZoom {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100vw);
+        opacity: 1;
+    }
+}
+
+body.animate-out {
+    animation: slideOutAndZoom 0.5s forwards;
+}
+
+
+@media only screem and(max-width : 1500px) {
+    header ul li a {
+        font-size: 12px;
+    }
+
+    header nav h1 {
+        font-size: 20px;
+        margin: 250px auto;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+}
+
+
+@media only screen and (max-width : 750) {
+    header ul li a {
+        font-size: 8px;
+        flex-direction: row;
+    }
+
+    header nav h1 {
+        font-size: 12px;
+        margin: 250px auto;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    
+    
+}

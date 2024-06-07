@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich</title>
+    <link rel="stylesheet" href="Über-mich.css">
+</head>
+
+<body>
+
+    <video autoplay muted loop id="backgroundVideo" style="position: fixed; right: 0; bottom: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -100;">
+        <source src="videoplayback.webm" type="video/webm">
+    </video>
+
+    <header>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="Homepage.html" id="home">Home</a></li>
+                <li><a href="über-mich.html" id="über-mich">Über mich</a></li>
+                <li><a href="#Fähigkeiten">Fähigkeiten</a></li>
+                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Kontakt">Kontakt</a></li>
+
+            </ul>
+            <h1> Über mich </h1>
+        </nav>
+    </header>
+
+
+
+    <footer>
+
+        <p>Copyright © 2024 Alle Rechte vorbehalten.</p>
+
+    </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded',function() {
+
+        varüberMichLink = document.getElementById('home');
+
+        überMichLink.addEventListener('click',function(event) {
+
+        event.preventDefault();
+
+        document.body.classList.add('animate-out');
+
+
+
+
+        setTimeout(function() {
+
+            window.location.href = überMichLink.href;
+
+
+        }, 500);
+
+    });
+
+});
+    </script>
+
+
+</body>
+</html>
